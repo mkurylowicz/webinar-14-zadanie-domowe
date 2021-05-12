@@ -15,8 +15,15 @@ public class SearchField extends BasePage{
         artCategory.click();
         artCategory.sendKeys("brown bear notebook");
 
+
         WebElement magnifier = driver.findElement(By.xpath("/html/body/main/header/div[2]/div/div[1]/div[2]/div[2]/form/button/i"));
         magnifier.click();
+
+        WebElement result = driver.findElement(By.className("product-title"));
+        String text = result.getText();
+        text = text.toLowerCase();
+
+        Assert.assertEquals(text, "brown bear notebook");
 
 
 

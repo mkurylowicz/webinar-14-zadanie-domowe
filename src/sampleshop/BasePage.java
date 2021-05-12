@@ -21,9 +21,9 @@ import java.util.concurrent.TimeUnit;
 
 
 
-        /*@AfterClass
+        @AfterClass
         public void tearDown(){
             driver.quit();
-        }*/
+        }
     }
 
